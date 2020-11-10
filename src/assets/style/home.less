@@ -1,0 +1,152 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &-logo {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+  }
+  &-avatar {
+    position: absolute;
+    z-index: 10;
+    top: 8px;
+    right: 12px;
+  }
+  &-top {
+    width: 100%;
+    height: 316px;
+    background-color: #FFFDF6;
+    background-repeat: round;
+    background-size: contain;
+    position: relative;
+    padding-top: 99px;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    transition: all 1s;
+    &--carousel {
+      margin-left: 10px;
+    }
+  }
+  &-content{
+    min-height: 700px;
+    background: #FFFDF6;
+    padding-top: 200px;
+    position: relative;
+    z-index: 1;
+    &-blue {
+      width: 76px;
+      height: 53px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('~@/assets/home/blueContentIcon.png');
+      position: absolute;
+      right: 0;
+      top: 600px;
+      animation: fade 1s linear;
+      @keyframes fade {
+        0% {
+          opacity: 0;
+          }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+    &-yellow {
+      width: 128px;
+      height: 67px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('~@/assets/home/yellowContentIcon.png');
+      position: absolute;
+      right: 0;
+      top: 600px;
+      animation: fade 1s linear;
+      @keyframes fade {
+        0% {
+          opacity: 0;
+          }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+    &-green {
+      width: 59px;
+      height: 35px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('~@/assets/home/greenContentIcon.png');
+      position: absolute;
+      right: 32px;
+      top: 600px;
+      animation: fade 1s linear;
+      @keyframes fade {
+        0% {
+          opacity: 0;
+          }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+    &--title {
+      height: 41px;
+      text-align: center;
+      font-size: 24px;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: #333333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      >span {
+        height: 41px;
+        line-height: 48px;
+        margin-left: 10px;
+      }
+    }
+    &::after {
+      content: '';
+      width: 100%;
+      height: 70px;
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+      border-radius: 100% 100% 0 0;
+      background: #FFF7E7;
+    }
+  }
+
+  &-bottom {
+    background: #FFFDF6;
+    width:100%;
+    height: 240px;
+    background: #FFF7E7;
+    text-align: center;
+    line-height: 380px;
+  }
+}
+.cupIcon {
+  background-image: url('../../assets/home/cupIcon.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 48px;
+  height: 41px;
+}
+
+.ballIcon {
+  background-image: url('../../assets/home/ballIcon.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 48px;
+  height: 41px;
+}

@@ -1,0 +1,11 @@
+.brightness(@val: 0.9) {
+  filter: brightness(@val);
+}
+
+.bg-img(@pos, @suffix: 'png'){
+  background-image: url("@{pos}.@{suffix}");
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+    background-image: url("@{pos}@2x.@{suffix}");
+  }
+  background-size: 100%;
+}

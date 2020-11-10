@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #FFFDF6;
+}
+body>iframe{
+  display: none;
+}
+figure {
+  margin: 0;
+}
+div::-webkit-scrollbar,
+ul::-webkit-scrollbar {
+  // display: none;
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+div:focus {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+ 
+ul,
+li {
+  list-style: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: "";
+    clear: both;
+    height: 0;
+  }
+}
+// 去除img 自带边框
+
+.hand {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.swal-modal {
+  * {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+}
+
+.swal-download-chrome .swal-footer {
+  text-align: center;
+}
+.swal-download-chrome .swal-text {
+  text-indent: 2em;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 14px;
+  padding: 0 20px;
+}
+
+.swal-button:focus {
+  box-shadow: none;
+}
+
+.vue-tooltip {
+  @light-bg-color: white;
+  @grey-bg-color: #f7fafd;
+  @brown-bg-color: #39261f;
+
+  @light-color: #333;
+
+  &.tooltip--large {
+    padding: .6em 1.4em;
+  }
+
+  &.tooltip--grey {
+    background-color: @grey-bg-color;
+    color: @light-color;
+
+    .tooltip-arrow {
+      border-color: @grey-bg-color;
+    }
+  }
+
+  &.tooltip--light {
+    background-color: @light-bg-color;
+    color: @light-color;
+
+    .tooltip-arrow {
+      border-color: @light-bg-color;
+    }
+  }
+
+  &.tooltip--brown {
+    background-color: @brown-bg-color;
+
+    .tooltip-arrow {
+      border-color: @brown-bg-color;
+    }
+  }
+}

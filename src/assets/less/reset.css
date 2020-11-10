@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #FFFDF6;
+}
+body > iframe {
+  display: none;
+}
+figure {
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+div:focus {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+}
+.hand:hover {
+  cursor: pointer;
+}
+.swal-modal * {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.swal-download-chrome .swal-footer {
+  text-align: center;
+}
+.swal-download-chrome .swal-text {
+  text-indent: 2em;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 14px;
+  padding: 0 20px;
+}
+.swal-button:focus {
+  box-shadow: none;
+}
+.vue-tooltip.tooltip--large {
+  padding: 0.6em 1.4em;
+}
+.vue-tooltip.tooltip--grey {
+  background-color: #f7fafd;
+  color: #333;
+}
+.vue-tooltip.tooltip--grey .tooltip-arrow {
+  border-color: #f7fafd;
+}
+.vue-tooltip.tooltip--light {
+  background-color: white;
+  color: #333;
+}
+.vue-tooltip.tooltip--light .tooltip-arrow {
+  border-color: white;
+}
+.vue-tooltip.tooltip--brown {
+  background-color: #39261f;
+}
+.vue-tooltip.tooltip--brown .tooltip-arrow {
+  border-color: #39261f;
+}

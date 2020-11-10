@@ -1,0 +1,17 @@
+@import './mixins.less';
+
+[class^=xh-icon] {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background-size: 100%;
+  vertical-align: middle;
+}
+
+.xh-icon {
+  &-avatar {
+    .bg-img("~@/assets/login/avatar");
+    border-radius: 50%;
+    border:2px solid rgba(82,55,20,1);
+  }
+}

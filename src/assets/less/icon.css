@@ -1,0 +1,18 @@
+[class^=xh-icon] {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background-size: 100%;
+  vertical-align: middle;
+}
+.xh-icon-avatar {
+  background-image: url("~@/assets/login/avatar.png");
+  background-size: 100%;
+  border-radius: 50%;
+  border: 2px solid #523714;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .xh-icon-avatar {
+    background-image: url("~@/assets/login/avatar@2x.png");
+  }
+}

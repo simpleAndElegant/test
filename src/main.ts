@@ -19,13 +19,13 @@ registerMicroApps(apps, {
     return Promise.resolve();
   },
   afterMount: (app) => {
-    // 加载子应用前，进度条加载完成
     console.log('after mount', app.name);
     return Promise.resolve();
   },
-}); // 注册应用
-start({
-  prefetch: false, // 取消预加载
 });
 
-createApp(App).use(store).use(router).mount('#app');
+start({
+  prefetch: false,
+});
+
+createApp(App).use(store).use(router).mount('#container');

@@ -1,0 +1,68 @@
+#captcha {
+  width: 100%;
+  height: 40px;
+  .nc-container .nc_scale .scale_text {
+    font-size: 14px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+  }
+  /deep/.nc_wrapper {
+    width: 100%;
+  }
+  /deep/.nc_scale {
+    border-radius: 20px;
+    overflow: hidden;
+    height: 40px;
+  }
+  /deep/.btn_slide {
+    border-radius: 20px;
+    height: 40px;
+    line-height: 40px;
+    width: 64px;
+    border:1px solid rgba(208,208,208,1);
+    box-sizing: border-box;
+  }
+  /deep/.nc-lang-cnt {
+    line-height: 40px;
+  }
+  /deep/.nc_bg {
+    border-radius: 17px 0 0 17px;
+    outline:#68953c solid 17px;
+    background-color: #68953c;
+    overflow: hidden;
+    // z-index: 2;
+    // &::after {
+    //   content: "按住滑块，拖动到最右边";
+    //   width: 334px;
+    //   color: #fff;
+    //   text-align: center;
+    //   line-height: 40px;
+    //   position: absolute;
+    //   left: 0;
+    //   cursor: move;
+    //   z-index: 2;
+    // }
+  }
+  /deep/.btn_ok {
+    border-radius: 20px;
+    height: 40px;
+    line-height: 40px;
+    width: 64px;
+    border:1px solid rgba(208,208,208,1);
+    box-sizing: border-box;
+
+    /deep/.scale_text2 {
+      z-index: 2;
+      background-color: #68953c;
+      .nc-lang-cnt{
+        color: #fff;
+        text-align: center;
+        line-height: 40px;
+        left: 0;
+      }
+    }
+  }
+  /deep/#nc_1__scale_text{
+    text-indent: 0px!important;
+  }
+}
