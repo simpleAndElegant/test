@@ -46,6 +46,7 @@ import {
   defineComponent, ref, onMounted,
 } from 'vue';
 import { startCreate } from '@/services/api/home';
+import { FreeCreateList } from '@/services/types/home';
 
 export default defineComponent({
   name: 'free-create',
@@ -53,7 +54,7 @@ export default defineComponent({
     const creationInfo = ref([]);
     async function handleStartCreate() {
       try {
-        const { data: { data } } = await startCreate();
+        const { data: { data } } = await startCreate<FreeCreateList>();
         creationInfo.value = data;
       } catch (error) {
         // TODO

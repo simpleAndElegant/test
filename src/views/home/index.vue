@@ -24,8 +24,9 @@
   </div>
 </template>
 <script lang="ts">
-import CommonHead from '@/components/CommonHead/index.vue';
 import FreeCreate from '@/components/FreeCreate/index';
+import CommonHead from '@/components/CommonHead/index';
+
 import { defineComponent } from 'vue';
 
 export default defineComponent({

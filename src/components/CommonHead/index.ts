@@ -1,1 +1,3 @@
-export { default as CommonHead} from './src/index.vue'
+import CommonHead from './src/index.vue';
+
+export default CommonHead;

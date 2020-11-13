@@ -1,4 +1,6 @@
 import axios from 'axios';
+import type { AxiosRequestConfig, AxiosResponse } from 'axios';
+
 // import swal from '../utils/swal';
 
 axios.defaults.timeout = 15000; // 15秒的超时验证
@@ -9,7 +11,7 @@ const instance = axios.create({
 });
 
 instance.interceptors.request.use(
-  (config) => {
+  (config: AxiosRequestConfig) => {
     const token = localStorage.getItem('XIAOHOUCODE_USERINFO') ? JSON.parse(localStorage.getItem('XIAOHOUCODE_USERINFO')).accessToken : '';
     if (token) {
       /* eslint-disable-next-line no-param-reassign */
@@ -21,7 +23,7 @@ instance.interceptors.request.use(
 );
 
 instance.interceptors.response.use(
-  (response) => response,
+  (response: AxiosResponse) => response,
 );
 
 export default instance;
