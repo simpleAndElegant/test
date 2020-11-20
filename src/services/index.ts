@@ -12,10 +12,10 @@ const instance = axios.create({
 
 instance.interceptors.request.use(
   (config: AxiosRequestConfig) => {
-    const token = localStorage.getItem('XIAOHOUCODE_USERINFO') ? JSON.parse(localStorage.getItem('XIAOHOUCODE_USERINFO')).accessToken : '';
+    const token = localStorage.getItem('XIAOHOUCODE_USERINFO');
     if (token) {
       /* eslint-disable-next-line no-param-reassign */
-      config.headers.Authorization = token;
+      config.headers.Authorization = JSON.parse(token).accessToken;
     }
     return config;
   },

@@ -1,8 +1,8 @@
-import { GlobalState, THEME_TYPES } from '../../types/global'
+import { GlobalState, THEME_TYPES } from '../../types/global';
 
-const state:GlobalState = {
-  theme:THEME_TYPES.Yellow
-}
+const state: GlobalState = {
+  theme: THEME_TYPES.Yellow,
+  freeCreateList: [],
+};
 
-
-export default state
+export default state;

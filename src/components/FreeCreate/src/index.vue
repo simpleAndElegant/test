@@ -39,35 +39,33 @@
 </template>
 
 <script lang="ts">
-// import { mapState, mapMutations } from 'vuex';
-// import unLogined from '@/assets/home/unLogined.png';
-
 import {
-  defineComponent, ref, onMounted,
+  defineComponent, onMounted, computed,
 } from 'vue';
-import { startCreate } from '@/services/api/home';
+import {
+  Store, useStore,
+} from 'vuex';
 import { FreeCreateList } from '@/services/types/home';
+import { AllModules } from '@/store/types/index';
+
+function useFreeCreateList(store: Store<AllModules>) {
+  const freeCreateList = computed(() => store.global);
+  onMounted(() => {
+    // if (freeCreateList.value.length === 0) {
+    //   store.dispatch('home/getFreeCreateList');
+    // }
+  });
+  return {
+    freeCreateList,
+  };
+}
 
 export default defineComponent({
   name: 'free-create',
   setup(props) {
-    const creationInfo = ref([]);
-    async function handleStartCreate() {
-      try {
-        const { data: { data } } = await startCreate<FreeCreateList>();
-        creationInfo.value = data;
-      } catch (error) {
-        // TODO
-        // useMessage
-      }
-    }
+    const store = useStore<AllModules>();
 
-    onMounted(() => {
-      handleStartCreate();
-    });
-    return {
-      creationInfo,
-    };
+    const { freeCreateList } = useFreeCreateList(store);
   },
 });
 </script>
